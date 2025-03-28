@@ -6,7 +6,7 @@ const protectRoute = async(req, res, next) => {
         // Check for token in cookies
         let token = req.cookies.token;
 
-        // If no token, check Authorization header
+    
         if (!token && req.headers.authorization) {
             token = req.headers.authorization.split(' ')[1];
         }
